@@ -1,0 +1,53 @@
+Open Terminal
+Run Below Cmd 
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+
+
+
+CREATE A NEW PROJECT\APPLICATION
+Run Below CMD 
+mix phoenix.new <application_name>
+
+mix phoenix.new fire_starter
+mix phoenix.server
+
+
+## =========================================
+Create a table : 
+mix ecto.gen.migration add_events_table 
+
+Run Migration :
+mix ecto.migrate
+
+
+Check Table in PSQL 
+
+\dt 
+
+Check Columns 
+\d+ <table_name>
+
+
+===================Adding Seed 
+fire_starter\priv\repo\seeds.exs
+mix run priv/repo/seeds.exs
+
+
+Add a Route : 
+
+fire_starter\web\router.ex
+
+mix phoenix.routes
+
+===================
+RUn a TEST 
+File : fire_starter\web\views\event_view_test.exs
+
+mix run --only current
+
+
+
+
+
+
+
