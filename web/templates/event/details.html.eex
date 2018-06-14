@@ -9,4 +9,10 @@
          </div>
          <%= submit "Reserve" , class: "btn btn-primary pull-right" %>
 <% end %>
+<h4>Comments: </h4>
+ <ol>
+ <%= for e <- @event.comments  do %>
+       <li><%= e.title  %></li>
+<% end %>
+</ol>
 <span id="id" data-id="<%= @event.id %>"></span>

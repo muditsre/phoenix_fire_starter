@@ -5,7 +5,7 @@ defmodule FireStarter.EventController do
 
 
   def show(conn, %{"id"=>id}) do
-    event = FireStarter.EventQueries.get_by_id(id)
+    event = FireStarter.EventQueries.get_by_id(id)  |> FireStarter.Repo.preload(:comments)
     |> IO.inspect()
     render conn, "details.html", event: event
   end

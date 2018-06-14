@@ -6,6 +6,7 @@ defmodule FireStarter.Events do
     field :title, :string
     field :description, :string
     field :quantity_available, :integer, default: 25
+    has_many :comments, FireStarter.Comment
     timestamps()
   end
 

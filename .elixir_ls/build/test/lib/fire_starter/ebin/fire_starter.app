@@ -3,6 +3,7 @@
               {modules,['Elixir.FireStarter',
                         'Elixir.FireStarter.AuthorizedPlug',
                         'Elixir.FireStarter.ChannelCase',
+                        'Elixir.FireStarter.Comment',
                         'Elixir.FireStarter.ConnCase',
                         'Elixir.FireStarter.Endpoint',
                         'Elixir.FireStarter.ErrorHelpers',
