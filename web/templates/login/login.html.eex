@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<%= form_for @conn, login_path(@conn, :login ), [as: :login], fn f ->  %>
+        <div class="form-group">
+            <%= label f, :username, "Username" %>
+            <%= text_input f, :username, class: "form-control" %>
+            
+        </div>
+         
+        <%= submit "Login" , class: "btn btn-primary pull-right" %>
+<% end %>

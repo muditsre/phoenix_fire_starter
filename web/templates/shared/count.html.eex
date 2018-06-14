@@ -1,0 +1,1 @@
+<h3>Total Events : <%=  Enum.count @list %></h3>

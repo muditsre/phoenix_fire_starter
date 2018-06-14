@@ -1,0 +1,6 @@
+ <%# <a href="events/<%= @event.id %>
+  <a href="<%= event_path(@conn , :show , @event.id) %>">
+          <h4>  <%= @event.title %></h4>
+        </a>
+        <div><%= @event.description %></div>
+         <div><%=  @event.inserted_at %></div>

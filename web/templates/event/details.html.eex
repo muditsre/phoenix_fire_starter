@@ -1,0 +1,12 @@
+<h1><%= @event.title %></h1>
+<p><%= @event.description %></p>
+<p><%= @event.inserted_at %></p>
+<h4>Available Spots: <span class="quantity"><%= @event.quantity_available %></span></h4>
+<%= form_for @conn, event_path(@conn, :reserve, @event.id ), [as: :reservation , class: "form-inline"], fn f ->  %>
+        <div class="form-group">
+            <%= label f, :quantity, "Quantity" %>
+            <%= number_input f, :quantity, class: "form-control" , min: 1 %>
+         </div>
+         <%= submit "Reserve" , class: "btn btn-primary pull-right" %>
+<% end %>
+<span id="id" data-id="<%= @event.id %>"></span>
